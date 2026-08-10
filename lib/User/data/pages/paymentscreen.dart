@@ -6,13 +6,13 @@ import 'package:flutter_car_service/User/data/pages/Addcard.dart';
 import 'package:flutter_car_service/style/color.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class PaymentMethodScreen extends StatefulWidget {
   final double cost; // Add the cost parameter to the constructor
 
-  PaymentMethodScreen({required this.cost}); // Constructor to receive the cost
+  const PaymentMethodScreen({super.key, required this.cost});
 
   @override
   _PaymentMethodScreenState createState() => _PaymentMethodScreenState();
@@ -28,10 +28,10 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
   DocumentReference? _serviceDocument; // Store the service document reference
 
   final List<Map<String, dynamic>> _paymentOptions = [
-    {'title': 'Google Pay', 'icon': Bootstrap.google_play},
-    {'title': 'PayPal', 'icon': Bootstrap.paypal},
-    {'title': 'Cash on delivery', 'icon': Bootstrap.cash_coin},
-    {'title': 'Apple Pay', 'icon': Bootstrap.apple},
+    {'title': 'Google Pay', 'icon': FontAwesomeIcons.googlePay},
+    {'title': 'PayPal', 'icon': FontAwesomeIcons.paypal},
+    {'title': 'Cash on delivery', 'icon': FontAwesomeIcons.moneyBill},
+    {'title': 'Apple Pay', 'icon': FontAwesomeIcons.apple},
   ];
 
   @override
@@ -325,7 +325,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
     );
   }
 
-  Widget _buildPaymentOption(String title, IconData icon) {
+  Widget _buildPaymentOption(String title, dynamic icon) {
     return Card(
       margin: EdgeInsets.symmetric(vertical: 8),
       shape: RoundedRectangleBorder(
@@ -334,7 +334,9 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
       ),
       child: ListTile(
         title: Text(title, style: GoogleFonts.poppins()),
-        leading: Icon(icon, size: 32),
+        leading: icon is IconData
+            ? Icon(icon, size: 32)
+            : FaIcon(icon, size: 32),
         onTap: () {
           setState(() {
             _selectedPaymentMethod = title;

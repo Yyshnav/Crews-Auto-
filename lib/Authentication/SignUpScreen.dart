@@ -4,8 +4,8 @@ import 'package:flutter_car_service/Authentication/SigninScreen.dart';
 import 'package:flutter_car_service/User/Widgets/customScafold.dart';
 
 import 'package:flutter_car_service/style/color.dart'; // Assuming this is where you define colors
-import 'package:icons_plus/icons_plus.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:image_picker/image_picker.dart'; // For image picking
 import 'dart:io'; // For handling files
 
@@ -267,9 +267,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Icon(Bootstrap.google, color: mainColor),
-                          Icon(Bootstrap.facebook, color: mainColor),
-                          Icon(Bootstrap.apple, color: mainColor),
+                          FaIcon(FontAwesomeIcons.google, color: mainColor),
+                          FaIcon(FontAwesomeIcons.facebook, color: mainColor),
+                          FaIcon(FontAwesomeIcons.apple, color: mainColor),
                         ],
                       ),
                       const SizedBox(height: 20.0),

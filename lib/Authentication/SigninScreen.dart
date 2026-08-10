@@ -14,8 +14,8 @@ import 'package:flutter_car_service/User/component/bottom_nav.dart';
 import 'package:flutter_car_service/User/data/pages/get_started.dart';
 import 'package:flutter_car_service/User/data/pages/home_pages.dart';
 import 'package:flutter_car_service/style/color.dart';
-import 'package:icons_plus/icons_plus.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -278,10 +278,10 @@ class _SignInScreenState extends State<SignInScreen> {
                                 );
                               }
                             },
-                            icon: Icon(Bootstrap.google, color: mainColor),
+                            icon: FaIcon(FontAwesomeIcons.google, color: mainColor),
                           ),
-                          Icon(Bootstrap.facebook, color: mainColor),
-                          Icon(Bootstrap.apple, color: mainColor),
+                          FaIcon(FontAwesomeIcons.facebook, color: mainColor),
+                          FaIcon(FontAwesomeIcons.apple, color: mainColor),
                         ],
                       ),
                       SizedBox(height: 25.0),

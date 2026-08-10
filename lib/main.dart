@@ -9,6 +9,7 @@ import 'package:flutter_car_service/Authentication/SigninScreen.dart';
 import 'package:flutter_car_service/Mechanic/component/bottomnav.dart';
 import 'package:flutter_car_service/Mechanic/pages/FullTaskDetails.dart';
 import 'package:flutter_car_service/Mechanic/pages/live.dart';
+import 'package:flutter_car_service/User/data/pages/ProfileScreen.dart';
 import 'package:flutter_car_service/User/data/pages/home_pages.dart';
 import 'package:flutter_car_service/User/data/pages/paymentscreen.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -94,7 +95,7 @@ class MyApp extends StatelessWidget {
         initialRoute: "/splash",
         routes: {
           "/home": (context) => HomePage(),
-          "/splash": (context) => SplashScreen(),
+          "/splash": (context) => HomePage(),
           "/admindashboard": (context) => AdminDashboard(
                 title: "",
                 mainColor: mainColor,

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TaskDetailsScreen extends StatefulWidget {
   final String userImage;
@@ -178,7 +178,7 @@ class _TaskDetailsScreenState extends State<TaskDetailsScreen> {
                       SizedBox(height: 16),
                       Row(
                         children: [
-                          Icon(Bootstrap.whatsapp, color: Colors.green),
+                          FaIcon(FontAwesomeIcons.whatsapp, color: Colors.green),
                           SizedBox(width: 8),
                           Text(widget.phoneNumber,
                               style: TextStyle(fontSize: 16)),

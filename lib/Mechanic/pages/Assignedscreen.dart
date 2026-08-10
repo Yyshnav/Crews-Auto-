@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_car_service/Api_integration/LoginAPI.dart';
 import 'package:flutter_car_service/Mechanic/pages/FullTaskDetails.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AssignedTasksScreen extends StatefulWidget {
@@ -163,7 +163,7 @@ class _AssignedTasksScreenState extends State<AssignedTasksScreen> {
             Row(
               children: [
                 IconButton(
-                  icon: Icon(Bootstrap.whatsapp,
+                  icon: FaIcon(FontAwesomeIcons.whatsapp,
                       color: Colors.green), // WhatsApp icon
                   onPressed: () {
                     _launchWhatsApp(phoneNumber);
